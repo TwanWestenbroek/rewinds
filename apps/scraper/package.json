@@ -1,0 +1,27 @@
+{
+  "name": "scraper",
+  "version": "1.0.0",
+  "description": "Web scraper application",
+  "main": "src/main.ts",
+  "scripts": {
+    "scrape": "ts-node src/main.ts"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.42.1",
+    "@repo/database": "workspace:*",
+    "@repo/geo": "workspace:*",
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.43.1",
+    "neverthrow": "^8.2.0",
+    "openai": "^4.100.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^20.11.24",
+    "eslint": "^9.27.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

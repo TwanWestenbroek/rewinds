@@ -5,7 +5,8 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
+      "env": ["REDIS_URL", "REDIS_TOKEN", "DATABASE_URL", "NODE_ENV"]
     },
     "lint": {
       "dependsOn": ["^lint"]
@@ -15,7 +16,23 @@
     },
     "dev": {
       "cache": false,
-      "persistent": true
+      "persistent": true,
+      "env": ["REDIS_URL", "REDIS_TOKEN", "DATABASE_URL", "NODE_ENV"]
+    },
+    "db:migrate": {
+      "outputs": []
+    },
+    "db:studio": {
+      "outputs": []
+    },
+    "db:generate": {
+      "outputs": []
+    },
+    "db:seed": {
+      "outputs": []
+    },
+    "scrape": {
+      "outputs": []
     }
   }
 }
